@@ -9,5 +9,5 @@ public class test_script : Node
 		
 	}
 
-// TESTE 11234454
+
 }
