@@ -1,8 +1,7 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Design/Character_Design/character_design.png" type="Texture" id=1]
-[ext_resource path="res://Sprite.gd" type="Script" id=2]
-
+[ext_resource path="res://scripts/Character_Controller.cs" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 126, 126.25 )
