@@ -20,6 +20,7 @@ public class Character_Controller : Sprite
 	public override void _Process(float delta)
 	{
 		float speed = 10;
+	 int vie = 1;
 	  Vector2 movePlayer = new Vector2(0,0);
 		if (Input.IsKeyPressed((int)KeyList.Z))
 		{
