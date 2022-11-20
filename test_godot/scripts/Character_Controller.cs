@@ -20,7 +20,11 @@ public class Character_Controller : Sprite
 	public override void _Process(float delta)
 	{
 		float speed = 10;
+<<<<<<< Updated upstream:test_godot/scripts/Character_Controller.cs
 
+=======
+	  	Vector2 movePlayer = new Vector2(0,0);
+>>>>>>> Stashed changes:test_godot/Assets/scripts/Character_Controller.cs
 		if (Input.IsKeyPressed((int)KeyList.Z))
 		{
 			this.Position += new Vector2(0,-speed);
