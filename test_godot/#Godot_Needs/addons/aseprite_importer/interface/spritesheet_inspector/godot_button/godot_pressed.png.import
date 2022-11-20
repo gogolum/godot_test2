@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/light_icon.png-7736224c34e6f06ad3ecf9b37cd89cab.stex"
+path="res://.import/godot_pressed.png-56caebb6aea016fa3802042a2f21dd1a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/aseprite_importer/interface/icons/light_icon.png"
-dest_files=[ "res://.import/light_icon.png-7736224c34e6f06ad3ecf9b37cd89cab.stex" ]
+source_file="res://#Godot_Needs/addons/aseprite_importer/interface/spritesheet_inspector/godot_button/godot_pressed.png"
+dest_files=[ "res://.import/godot_pressed.png-56caebb6aea016fa3802042a2f21dd1a.stex" ]
 
 [params]
 

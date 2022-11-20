@@ -1,6 +1,7 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://addons/aseprite_importer/interface/spritesheet_inspector/ColorMenuItem.gd" type="Script" id=1]
+[ext_resource path="res://#Godot_Needs/addons/aseprite_importer/interface/spritesheet_inspector/ColorMenuItem.gd" type="Script" id=1]
+
 
 [node name="ColorMenuItem" type="VBoxContainer"]
 margin_right = 103.0
