@@ -20,25 +20,25 @@ public class Character_Controller : Sprite
 	public override void _Process(float delta)
 	{
 		float speed = 10;
-
+	  Vector2 movePlayer = new Vector2(0,0);
 		if (Input.IsKeyPressed((int)KeyList.Z))
 		{
-			this.Position += new Vector2(0,-speed);
+			movePlayer.y -= speed;
 		}
 		if (Input.IsKeyPressed((int)KeyList.S))
 		{
-			this.Position += new Vector2(0,speed);
+			movePlayer.y += speed;
 		}
 		if (Input.IsKeyPressed((int)KeyList.Q))
 		{
-			this.Position += new Vector2(-speed,0);
+			movePlayer.x -= speed;
 			this.FlipH = true;
 		}
 		if (Input.IsKeyPressed((int)KeyList.D))
 		{
-			this.Position += new Vector2(speed,0);
+			movePlayer.x += speed;
 			this.FlipH = false;
 		}
-		
+		this.Position += movePlayer.Normalized()*speed;
 	}
 }
