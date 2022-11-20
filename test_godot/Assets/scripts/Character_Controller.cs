@@ -8,7 +8,9 @@ public class Character_Controller : Sprite
 	// private string b = "text";
 
 	// Called when the node enters the scene tree for the first time.
-	[Export] public float speed = 0;
+
+	[Export] public float speed = 1000;
+
 
 	public override void _Ready()
 	{
