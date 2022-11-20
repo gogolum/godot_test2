@@ -21,20 +21,20 @@ public class Character_Controller : Sprite
 	{
 		float speed = 10;
 
-		if (Input.IsActionPressed("move_up"))
+		if (Input.IsKeyPressed((int)KeyList.Z))
 		{
 			this.Position += new Vector2(0,-speed);
 		}
-		if (Input.IsActionPressed("move_down"))
+		if (Input.IsKeyPressed((int)KeyList.S))
 		{
 			this.Position += new Vector2(0,speed);
 		}
-		if (Input.IsActionPressed("move_left"))
+		if (Input.IsKeyPressed((int)KeyList.Q))
 		{
 			this.Position += new Vector2(-speed,0);
 			this.FlipH = true;
 		}
-		if (Input.IsActionPressed("move_right"))
+		if (Input.IsKeyPressed((int)KeyList.D))
 		{
 			this.Position += new Vector2(speed,0);
 			this.FlipH = false;
