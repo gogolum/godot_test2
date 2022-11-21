@@ -6,12 +6,12 @@
 
 [node name="main" type="Node2D"]
 
-[node name="character" parent="." instance=ExtResource( 2 )]
-position = Vector2( 4, 7 )
-
-[node name="Weapons" parent="character" instance=ExtResource( 3 )]
-position = Vector2( 396, 244 )
-scale = Vector2( 0.4, 0.4 )
-
 [node name="chickenMob" parent="." instance=ExtResource( 1 )]
 position = Vector2( 4, 7 )
+
+[node name="character" parent="." instance=ExtResource( 2 )]
+position = Vector2( 5, 9 )
+
+[node name="Weapons" parent="." instance=ExtResource( 3 )]
+position = Vector2( 404, 251 )
+scale = Vector2( 0.4, 0.4 )
