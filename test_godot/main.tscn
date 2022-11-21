@@ -13,3 +13,5 @@ position = Vector2( 4, 7 )
 position = Vector2( 4, 7 )
 
 [node name="Weapons" parent="." instance=ExtResource( 3 )]
+position = Vector2( 400, 251 )
+scale = Vector2( 0.4, 0.4 )
