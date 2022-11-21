@@ -9,10 +9,10 @@ public class Weapons : Node2D
 
 	// Called when the node enters the scene tree for the first time.
 
-	PackedScene bullet_scene;
+	PackedScene bulletScene;
 	public override void _Ready()
 	{
-		bullet_scene = GD.Load<PackedScene>("res://Bullet.tscn");
+		bulletScene = GD.Load<PackedScene>("res://Bullet.tscn");
 	}
 
 	//  // Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -25,7 +25,11 @@ public class Weapons : Node2D
 	{
 		if (@event is InputEventMouseButton mouseEvent){
 			if (mouseEvent.ButtonIndex == (int)ButtonList.Left && mouseEvent.Pressed){
-				GD.Print("left button press");
+				Bullet bullet = (Bullet)bulletScene.Instance();
+				bullet.Position = Position;
+				bullet.Rotation = Rotation;
+				GetParent().AddChild(bullet);
+				GetTree().SetInputAsHandled();
 			}
 		}
 	}

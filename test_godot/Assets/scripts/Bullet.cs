@@ -26,7 +26,5 @@ public class Bullet : Node2D
  }
 
  private void OnCollision(Node with){
-	GD.Print("bullet touched !");
-	QueueFree();
  }
 }
