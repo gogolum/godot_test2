@@ -15,11 +15,11 @@ public class Weapons : Node2D
 		bulletScene = GD.Load<PackedScene>("res://Bullet.tscn");
 	}
 
-	//  // Called every frame. 'delta' is the elapsed time since the previous frame.
-	//  public override void _Process(float delta)
-	//  {
-	//      
-	//  }
+
+	public override void _Process(float delta)
+ {
+	 
+ }
 
 	public override void _UnhandledInput(InputEvent @event)
 	{
