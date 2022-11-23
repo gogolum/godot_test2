@@ -9,9 +9,10 @@
 [node name="chickenMob" parent="." instance=ExtResource( 1 )]
 position = Vector2( 4, 7 )
 
-[node name="character" parent="." instance=ExtResource( 2 )]
-position = Vector2( 5, 9 )
-
 [node name="Weapons" parent="." instance=ExtResource( 3 )]
 position = Vector2( 404, 251 )
 scale = Vector2( 0.4, 0.4 )
+
+[node name="character" parent="Weapons" instance=ExtResource( 2 )]
+position = Vector2( -997.5, -605 )
+scale = Vector2( 2.5, 2.5 )
