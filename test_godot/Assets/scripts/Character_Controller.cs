@@ -46,5 +46,7 @@ public class Character_Controller : Sprite
 		Weapons weapons = (Weapons)weapon_scene.Instance();
 		weapons.Position = Position;
 		weapons.Rotation = Rotation;
+		GetParent().AddChild(weapons);
+		GetTree().SetInputAsHandled();
 	}
 }
