@@ -26,11 +26,11 @@ public class Weapons : Node2D
 		if (@event is InputEventMouseButton mouseEvent){
 			if (mouseEvent.ButtonIndex == (int)ButtonList.Left && mouseEvent.Pressed){
 				Bullet bullet = (Bullet)bulletScene.Instance();
-				bullet.Position = this.Position;
-				bullet.Rotation = this.Rotation;
-				GetParent().AddChild(bullet);	
+				bullet.Position = Position;
+				bullet.Rotation = Rotation;
+				GetParent().AddChild(bullet);
+				SetAsToplevel(true);	
 				GetTree().SetInputAsHandled();
-				bullet.ToGlobal(bullet.Position);
 			}
 		}
 	}

@@ -7,7 +7,7 @@
 radius = 115.0
 
 [node name="Bullet_SnowBall" type="Node2D"]
-position = Vector2( 242, 315 )
+position = Vector2( 508, 298 )
 scale = Vector2( 0.1, 0.1 )
 script = ExtResource( 2 )
 
@@ -16,7 +16,6 @@ position = Vector2( 0, -1 )
 texture = ExtResource( 1 )
 
 [node name="Area2D" type="Area2D" parent="."]
-scale = Vector2( 1, 1 )
 
 [node name="Hitbox_Bullet" type="CollisionShape2D" parent="Area2D"]
 position = Vector2( -8, -10 )
