@@ -3,9 +3,6 @@
 [ext_resource path="res://Assets/scripts/chickenMob.cs" type="Script" id=1]
 [ext_resource path="res://Assets/Design/animation/chickenRun.png" type="Texture" id=2]
 
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 121, 113 )
-
 [sub_resource type="AtlasTexture" id=2]
 flags = 4
 atlas = ExtResource( 2 )
@@ -34,21 +31,20 @@ animations = [ {
 "speed": 5.0
 } ]
 
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 120.5, 111.5 )
+
 [node name="Node2D" type="Node2D"]
+scale = Vector2( 0.25, 0.25 )
 script = ExtResource( 1 )
-
-[node name="Area2D" type="Area2D" parent="."]
-position = Vector2( -114, 28 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 234, 82 )
-shape = SubResource( 1 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 114, 95 )
 frames = SubResource( 6 )
-frame = 2
 playing = true
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
+position = Vector2( 123.5, 108.5 )
+shape = SubResource( 7 )

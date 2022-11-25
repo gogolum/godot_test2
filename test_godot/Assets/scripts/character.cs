@@ -7,8 +7,8 @@ public class character : Node2D
 	{
 		
 	}
-
 	[Export] public float speed = 1000;
+	[Export] public float vie = 3;
 
 	public override void _Process(float delta)
 	{
