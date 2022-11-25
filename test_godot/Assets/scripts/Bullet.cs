@@ -18,7 +18,7 @@ public class Bullet : Node2D
  public override void _Process(float delta)
  {
 	 float MoveAmount = speed * delta;
-	 Position += Transform.x.Normalized() * MoveAmount;
+	 GlobalPosition += Transform.x.Normalized() * MoveAmount;
 	 distanceTraveled += MoveAmount;
 	 if (distanceTraveled > range){
 		QueueFree();
