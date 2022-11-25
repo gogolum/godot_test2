@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public class Weapons : Node2D
+public class Weapons : Sprite
 {
 	// Declare member variables here. Examples:
 	// private int a = 2;
@@ -26,11 +26,9 @@ public class Weapons : Node2D
 		if (@event is InputEventMouseButton mouseEvent){
 			if (mouseEvent.ButtonIndex == (int)ButtonList.Left && mouseEvent.Pressed){
 				Bullet bullet = (Bullet)bulletScene.Instance();
-				bullet.Position = Position;
-				bullet.Rotation = Rotation;
-				GetParent().AddChild(bullet);
-				SetAsToplevel(true);	
+				GetTree().Root.GetNode("main").AddChild(bullet);
 				GetTree().SetInputAsHandled();
+				
 			}
 		}
 	}
