@@ -27,9 +27,8 @@ public class Weapons : Sprite
 			if (mouseEvent.ButtonIndex == (int)ButtonList.Left && mouseEvent.Pressed){
 				Bullet bullet = (Bullet)bulletScene.Instance();
 				bullet.Position = Position;
-				GetParent().AddChild(bullet);
+				GetViewport().AddChild(bullet);
 				GetTree().SetInputAsHandled();
-				
 			}
 		}
 	}

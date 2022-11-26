@@ -3,7 +3,7 @@ using System;
 
 public class Bullet : Node2D
 {
-	[Export]float speed = 400;
+	[Export]float speed = 1000;
 	public float range = 1500;
 	private float distanceTraveled = 0;
 	

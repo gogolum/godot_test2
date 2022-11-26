@@ -1,8 +1,7 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Assets/scripts/character_sprite.cs" type="Script" id=1]
 [ext_resource path="res://Assets/Design/Character_Design/character_design.png" type="Texture" id=2]
-[ext_resource path="res://Assets/scripts/Weapons.cs" type="Script" id=3]
 [ext_resource path="res://Assets/Design/Weapon/fire_ball.png" type="Texture" id=4]
 
 [sub_resource type="RectangleShape2D" id=2]
@@ -32,7 +31,6 @@ script = ExtResource( 1 )
 position = Vector2( 51, 23 )
 scale = Vector2( 0.2, 0.2 )
 texture = ExtResource( 4 )
-script = ExtResource( 3 )
 
 [node name="Hitbox" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 51, 20 )

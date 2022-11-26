@@ -3,9 +3,10 @@ using System;
 
 public class character : Node2D
 {
-		public override void _Ready()
+	PackedScene bulletScene;
+	public override void _Ready()
 	{
-		
+		bulletScene = GD.Load<PackedScene>("res://Bullet.tscn");
 	}
 	[Export] public float speed = 1000;
 	[Export] public float vie = 3;
@@ -33,4 +34,16 @@ public class character : Node2D
 		this.Position += movePlayer.Normalized()*player_speed;
 	}
 
+	public override void _UnhandledInput(InputEvent @event)
+	{
+		if (@event is InputEventMouseButton mouseEvent){
+			if (mouseEvent.ButtonIndex == (int)ButtonList.Left && mouseEvent.Pressed){
+				Bullet bullet = (Bullet)bulletScene.Instance();
+				bullet.Position = Position + new Vector2(50,20);
+				bullet.Rotation = Rotation;
+				GetParent().AddChild(bullet);
+				GetTree().SetInputAsHandled();
+			}
+		}
+	}
 }

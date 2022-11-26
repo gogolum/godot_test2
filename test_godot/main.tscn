@@ -9,9 +9,9 @@
 
 [node name="Background" parent="." instance=ExtResource( 4 )]
 
+[node name="chickenMob2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 5.00003, 9.00002 )
+
 [node name="character" parent="." instance=ExtResource( 1 )]
 position = Vector2( 363, 332 )
 script = ExtResource( 5 )
-
-[node name="chickenMob2" parent="." instance=ExtResource( 2 )]
-position = Vector2( 5.00003, 9.00002 )
