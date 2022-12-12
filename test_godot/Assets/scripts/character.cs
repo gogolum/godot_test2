@@ -4,12 +4,12 @@ using System;
 public class character : Node2D
 {
 	PackedScene bulletScene;
-	Transform2D scale;
+	PackedScene chikenMobFollow;
+	Position2D enemy_pos;
 	public override void _Ready()
 	{
 		bulletScene = GD.Load<PackedScene>("res://Bullet.tscn");
-
-		scale = Transform;
+		chikenMobFollow = GD.Load<PackedScene>("res://chickenMob.tscn");
 	}
 	[Export] public float speed = 1000;
 	[Export] public float vie = 3;
@@ -29,15 +29,10 @@ public class character : Node2D
 		if (Input.IsKeyPressed((int)KeyList.Q))
 		{
 			movePlayer.x -= player_speed;
-			scale.x *= -1;
-			Transform = scale;
-
 		}
 		if (Input.IsKeyPressed((int)KeyList.D))
 		{
 			movePlayer.x += player_speed;
-			scale.x *= 1;
-			Transform = scale;
 		}
 		this.Position += movePlayer.Normalized()*player_speed;
 	}
@@ -48,7 +43,6 @@ public class character : Node2D
 			if (mouseEvent.ButtonIndex == (int)ButtonList.Left && mouseEvent.Pressed){
 				Bullet bullet = (Bullet)bulletScene.Instance();
 				bullet.Position = Position + new Vector2(50,20);
-				bullet.Rotation = Rotation;
 				GetParent().AddChild(bullet);
 				GetTree().SetInputAsHandled();
 			}

@@ -17,6 +17,9 @@ public class Bullet : Node2D
 
  public override void _Process(float delta)
  {
+	var chicken = GetTree().Root.GetNode("main").GetNode<Node2D>("chickenMob2").GetNode<KinematicBody2D>("KinematicBody2D");
+	var enemy_pos = chicken.Position;
+	LookAt(enemy_pos);
 	 float MoveAmount = speed * delta;
 	 GlobalPosition += Transform.x.Normalized() * MoveAmount;
 	 distanceTraveled += MoveAmount;

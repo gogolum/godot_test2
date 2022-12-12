@@ -18,18 +18,18 @@ public class Weapons : Sprite
 
 	public override void _Process(float delta)
  {
-	 
+	
  }
 
-	public override void _UnhandledInput(InputEvent @event)
-	{
-		if (@event is InputEventMouseButton mouseEvent){
-			if (mouseEvent.ButtonIndex == (int)ButtonList.Left && mouseEvent.Pressed){
-				Bullet bullet = (Bullet)bulletScene.Instance();
-				bullet.Position = Position;
-				GetViewport().AddChild(bullet);
-				GetTree().SetInputAsHandled();
-			}
-		}
-	}
+	// public override void _UnhandledInput(InputEvent @event)
+	// {
+	// 	if (@event is InputEventMouseButton mouseEvent){
+	// 		if (mouseEvent.ButtonIndex == (int)ButtonList.Left && mouseEvent.Pressed){
+	// 			Bullet bullet = (Bullet)bulletScene.Instance();
+	// 			bullet.Position = Position;
+	// 			GetViewport().AddChild(bullet);
+	// 			GetTree().SetInputAsHandled();
+	// 		}
+	// 	}
+	// }
 }
