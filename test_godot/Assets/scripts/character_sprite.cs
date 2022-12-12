@@ -18,7 +18,6 @@ public class character_sprite : Sprite
 		if (Input.IsKeyPressed((int)KeyList.Q))
 		{
 			this.FlipH = true;
-			Console.WriteLine("baaaaahhh");
 		}
 		if (Input.IsKeyPressed((int)KeyList.D))
 		{
